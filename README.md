@@ -2,6 +2,10 @@
 
 ![](https://simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fjpg%2Fb8b78030-7735-4450-89dd-259ef605de3e.jpg&w=1280&q=75)
 
+## Conception
+
+![](./classe.png)
+
 ## Contexte du projet   
 
 Dans le cadre de son développement au Maroc, la société MarocShip souhaite faciliter la gestion de livraison avec les sites E-commerce partenaires par la création d’une application web
