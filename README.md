@@ -2,7 +2,7 @@
 
 ![](https://simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fjpg%2Fb8b78030-7735-4450-89dd-259ef605de3e.jpg&w=1280&q=75)
 
-## Contexte du projet
+## Contexte du projet   
 
 Dans le cadre de son développement au Maroc, la société MarocShip souhaite faciliter la gestion de livraison avec les sites E-commerce partenaires par la création d’une application web
 la société MarocShip est une société multinationale basée à Casablanca et dérigée par un seul Admin( il va créer les managers), chaque année MarocShip recrute plusieurs chauffeurs pour couvrir la forte demande des livraisons, chaque chauffeur est responsable d'un véhicule qui peut être une voiture ou petit camion ou grand camion voir les avions pour les livraison internationales.
