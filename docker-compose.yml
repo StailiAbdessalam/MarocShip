@@ -1,0 +1,19 @@
+services:
+  dockerTomcat:
+    image: tomcat
+    volumes:
+      - ./target:/usr/local/tomcat/webapps
+    ports:
+      - 8090:8080
+
+  dockerDB:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: marocship
+    volumes:
+      - dbmarocdhip:/var/lib/mysql
+    ports:
+      - 3307:3306
+volumes:
+  dbmarocdhip:
