@@ -1,19 +1,29 @@
 services:
-  dockerTomcat:
-    image: tomcat
-    volumes:
-      - ./target:/usr/local/tomcat/webapps
+  jboss:
+    image: quay.io/wildfly/wildfly
     ports:
-      - 8090:8080
-
-  dockerDB:
+        - 8084:8080
+    volumes:
+        - ./target/marocship-1.0-SNAPSHOT.war:/opt/jboss/wildfly/standalone/deployments/ROOT.war
+  DBsql:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: marocship
     volumes:
-      - dbmarocdhip:/var/lib/mysql
+      - dbmarocship:/var/lib/mysql
     ports:
       - 3307:3306
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8000:80
+    environment:
+      - PMA_HOST=DBsql
+      - PMA_PORT=3306
+      - PMA_USER=root
+      - PMA_PASSWORD=123456
+    depends_on:
+      - DBsql
 volumes:
-  dbmarocdhip:
+  dbmarocship:
