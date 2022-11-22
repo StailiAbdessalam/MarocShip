@@ -1,0 +1,42 @@
+CREATE TABLE IF NOT EXISTS Person(
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   nom VARCHAR(50) NOT NULL,
+   prenom VARCHAR(50) NOT NULL,
+   email VARCHAR(50) NOT NULL,
+   password TEXT NOT NULL,
+   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS Admin (
+    id_Admin INT PRIMARY KEY,
+    FOREIGN KEY(id_Admin) REFERENCES Person(id)
+);
+CREATE TABLE IF NOT EXISTS Manager (
+    id_Manager INT PRIMARY KEY,
+    FOREIGN KEY(id_Manager) REFERENCES Person(id)
+);
+CREATE TABLE IF NOT EXISTS Responsable (
+    id_Responsable INT PRIMARY KEY,
+    FOREIGN KEY(id_Responsable) REFERENCES Person(id)
+);
+CREATE TABLE IF NOT EXISTS Vehicule (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL,
+    max_poid FLOAT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS Chauffeur (
+    id_Chauffeur INT PRIMARY KEY,
+    max FLOAT NOT NULL,
+    point_fidelite INT NOT NULL,
+    vehicule_id INTEGER REFERENCES Vehicule (id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY(id_Chauffeur) REFERENCES Person(id)
+);
+CREATE TABLE IF NOT EXISTS Livraison (
+    id_Chauffeur INT PRIMARY KEY,
+    ville_depart DATE NOT NULL,
+    ville_arrivee DATE NOT NULL,
+    prix FLOAT NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    poids INT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
