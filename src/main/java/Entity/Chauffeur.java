@@ -2,10 +2,11 @@ package Entity;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
-public class Chauffeur {
+public class Chauffeur implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_chauffeur")
