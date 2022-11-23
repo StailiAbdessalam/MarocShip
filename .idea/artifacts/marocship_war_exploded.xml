@@ -34,6 +34,11 @@
           <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:4.0.1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.19" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
+          <element id="library" level="project" name="Maven: de.mkammerer:argon2-jvm:2.11" />
+          <element id="library" level="project" name="Maven: de.mkammerer:argon2-jvm-nolibs:2.11" />
+          <element id="library" level="project" name="Maven: net.java.dev.jna:jna:5.8.0" />
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
