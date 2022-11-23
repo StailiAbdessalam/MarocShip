@@ -8,10 +8,10 @@ import javax.mail.internet.MimeMessage;
 public class Email {
     public static void sendMail(String userEmail, String msg) {
         // Sender's email ID needs to be mentioned
+
         String email = "daalabireda@gmail.com";
         String password = "gwlzvspijaxggbqk";
-        //password email daalabir@gmail.com
-        //udfcuhgoqjdwloan
+
         String smtp = "smtp.gmail.com";
         String port = "25";
 
