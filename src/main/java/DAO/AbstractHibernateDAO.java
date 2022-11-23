@@ -1,6 +1,6 @@
 package DAO;
 
-import Utuls.JPAService;
+import Utils.JPAService;
 import java.io.Serializable;
 import java.util.List;
 
