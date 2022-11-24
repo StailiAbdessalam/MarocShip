@@ -4,7 +4,7 @@ services:
     ports:
         - 8084:8080
     volumes:
-        - ./target/marocship-1.0-SNAPSHOT.war:/opt/jboss/wildfly/standalone/deployments/ROOT.war
+          - ./target/marocship-1.0-SNAPSHOT.war:/opt/jboss/wildfly/standalone/deployments/ROOT.war
   DBsql:
     image: mysql
     environment:

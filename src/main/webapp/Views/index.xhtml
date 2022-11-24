@@ -5,7 +5,15 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
 <f:view>
-    <h:outputLabel value="Hello I am Reda DAALABI Your'e Welcome"/>
+    <h:head>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.42.0/dist/full.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <ui:include src="../Components/Views/Nav-Bar.xhtml"/>
+        <ui:include src="../Components/Views/Hero.xhtml"/>
+        <ui:include src="../Components/Views/footer.xhtml"/>
+    </h:body>
 </f:view>
 </html>

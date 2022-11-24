@@ -22,7 +22,7 @@ public class ChauffeurDao extends AbstractHibernateDAO<Chauffeur> {
         return findAll();
     }
 
-    //cretate chauffeur
+    //create chauffeur
     public void cretaChauffeur(Chauffeur chauffeur){
         create(chauffeur);
     }
