@@ -23,4 +23,8 @@
     <welcome-file-list>
         <welcome-file>Views/index.xhtml</welcome-file>
     </welcome-file-list>
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/faces-config.xml</param-value>
+    </context-param>
 </web-app>
