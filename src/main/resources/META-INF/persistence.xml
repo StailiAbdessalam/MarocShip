@@ -11,6 +11,7 @@
         <class>Entity.Manager</class>
         <class>Entity.Responsable</class>
         <class>Entity.Vehicule</class>
+        <class>Entity.Recrutement</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/marocship" />
