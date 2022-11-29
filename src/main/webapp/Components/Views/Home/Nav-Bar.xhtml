@@ -12,7 +12,7 @@
     </h:head>
     <div class="navbar bg-base-100">
         <div class="flex-1">
-            <a href="/" class="btn btn-ghost normal-case text-xl">Maroc<span class="text-blue-600">Ship</span> </a>
+            <a class="btn btn-ghost normal-case text-xl">Maroc<span class="text-blue-600">Ship</span> </a>
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal p-0">
@@ -23,16 +23,23 @@
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </a>
                     <ul class="p-2 bg-base-100">
-                        <h:form>
-                        <li><a><h:commandLink value="Demande d'emploi" action="#{chauffeurcontrollers.LoginChauffeur()}" /></a></li>
-                        <li><a><h:commandLink value="Login" action="#{chauffeurcontrollers.DemandeChauffeur()}" /></a></li>
-                        </h:form>
-
+                        <li class="text-center">
+                            <h:form>
+                                <a>
+                                    <h:commandButton action="#{navigationController.moveToPageDemandeChauffeur()}" value="Demande" />
+                                </a>
+                            </h:form>
+                        </li>
+                        <li class="text-center">
+                            <h:form>
+                                <a>
+                                    <h:commandButton action="#{navigationController.moveToPageLoginChauffeur()}" value="Login" />
+                                </a>
+                            </h:form>
+                        </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="../../../Views/Login.xhtml">Login</a>
-                </li>
+                <li><a>Login</a></li>
             </ul>
         </div>
     </div>

@@ -11,12 +11,89 @@
     </h:head>
     <h:body>
         <ui:include src="../../Components/Views/Nav-Bar.xhtml"/>
-        <div class="container mx-auto">
-            <div class="flex flex-col items-center justify-center h-screen">
-                <h1 class="text-5xl font-bold">Welcome to the Login Page</h1>
-                <h2 class="text-3xl font-bold">This is the Login page</h2>
+        <div class="min-h-screen flex flex-col items-center justify-center">
+            <div class="flex flex-col bg-gray-200 shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
+                <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
+                <div class="mt-10">
+                    <h:form>
+                        <div class="flex flex-col mb-6">
+                            <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
+                            <div class="relative">
+                                <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                                    </svg>
+                                </div>
+
+                                <h:inputText id="email" type="email" name="email" value="#{testController.email}" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="E-Mail Address" />
+                            </div>
+                        </div>
+                        <div class="flex flex-col mb-6">
+                            <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Password:</label>
+                            <div class="relative">
+                                <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+              <span>
+                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </span>
+                                </div>
+
+                                <h:inputText id="password" type="password" name="password" value="#{testController.password}" class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Password" />
+                            </div>
+                        </div>
+                        <div class="flex w-full">
+                            <h:commandButton value="login" type="submit" class="cursor-pointer flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in"/>
+                            <!--                            <span class="mr-2 uppercase">Login</span>-->
+                            <!--                            <span>-->
+                            <!--              <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">-->
+                            <!--                <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />-->
+                            <!--              </svg>-->
+                            <!--            </span>-->
+                            <!--                        </h:commandButton>>-->
+                        </div>
+                    </h:form>
+                </div>
             </div>
         </div>
+<!--        <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:mx-auto w-full my-16">-->
+<!--            <h2 class="text-center text-gray-900 text-lg font-medium title-font mb-5">Login Chauffeur</h2>-->
+<!--            <div class="relative mb-4">-->
+<!--                <label class="leading-7 text-sm text-gray-600">E-mail</label>-->
+<!--                <input type="text" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>-->
+<!--            </div>-->
+<!--            <div class="relative mb-4">-->
+<!--                <label class="leading-7 text-sm text-gray-600">Password</label>-->
+<!--                <input type="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>-->
+<!--            </div>-->
+<!--            <button type="submit" class="mt-2 mx-auto shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded py-4 w-full">-->
+<!--                Button-->
+<!--            </button>-->
+<!--        </div>-->
+<!--        <div class="flex flex-col items-center justify-center" style="height: 78vh !important;">-->
+<!--        <div class="flex items-center justify-center" style="min-height: 78vh !important;">-->
+<!--            <div class="px-8 py-6 mt-4 text-center">-->
+<!--                <h3 class="text-2xl font-bold text-center">Login Chauffeur</h3>-->
+<!--                <form action="" class="flex flex-col justify-center">-->
+<!--                    <div class="mt-4">-->
+<!--                        <div>-->
+<!--                            <label class="flex items-baseline justify-between">Email</label>-->
+<!--                            <h:inputText type="text" placeholder="Email"-->
+<!--                               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"/>-->
+<!--                        </div>-->
+<!--                        <div class="mt-4">-->
+<!--                            <label class="flex items-baseline justify-between">Password</label>-->
+<!--                            <h:inputText placeholder="Password"-->
+<!--                                   class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"/>-->
+<!--                        </div>-->
+<!--                        <div class="flex items-baseline justify-between">-->
+<!--                            <button class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        </div>-->
         <ui:include src="../../Components/Views/footer.xhtml"/>
     </h:body>
 </f:view>
