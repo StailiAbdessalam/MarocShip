@@ -22,12 +22,22 @@
                         Chauffeur
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </a>
-                    <h:form>
                     <ul class="p-2 bg-base-100">
-                        <li><a><h:commandLink value="Demande d'emploi" action="#{chauffeurcontrollers.LoginChauffeur()}" /></a></li>
-                        <li><a><h:commandLink value="Login" action="#{chauffeurcontrollers.DemandeChauffeur()}" /></a></li>
+                        <li class="text-center">
+                            <h:form>
+                                <a>
+                                    <h:commandButton action="#{navigationController.moveToPageDemandeChauffeur()}" value="Demande" />
+                                </a>
+                            </h:form>
+                        </li>
+                        <li class="text-center">
+                            <h:form>
+                                <a>
+                                    <h:commandButton action="#{navigationController.moveToPageLoginChauffeur()}" value="Login" />
+                                </a>
+                            </h:form>
+                        </li>
                     </ul>
-                    </h:form>
                 </li>
                 <li><a>Login</a></li>
             </ul>
