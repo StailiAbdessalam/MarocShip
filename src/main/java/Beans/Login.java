@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import DAO.DaoEntity.ManagerDao;
 import Utils.SessionUtils;
-import jakarta.annotation.ManagedBean;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
@@ -50,20 +49,19 @@ public class Login implements Serializable {
 
     //validate login
     public String validateUsernamePassword() {
-        return "admin";
-//        boolean valid = ManagerDao.validateAdminLogin(new String[]{email, password});
-//        if (valid) {
-//            HttpSession session = SessionUtils.getSession();
-//            session.setAttribute("username", email);
-//            return "admin";
-//        } else {
-//            FacesContext.getCurrentInstance().addMessage(
-//                    null,
-//                    new FacesMessage(FacesMessage.SEVERITY_WARN,
-//                            "Incorrect Username and Passowrd",
-//                            "Please enter correct username and Password"));
-//            return "login";
-//        }
+        boolean valid = ManagerDao.validateAdminLogin(new String[]{email, password});
+        if (valid) {
+            HttpSession session = SessionUtils.getSession();
+            session.setAttribute("username", email);
+            return "admin";
+        } else {
+            FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Incorrect Username and Passowrd",
+                            "Please enter correct username and Password"));
+            return "login";
+        }
     }
 
     //logout event, invalidate session
