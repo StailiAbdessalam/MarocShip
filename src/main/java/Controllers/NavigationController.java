@@ -15,5 +15,8 @@ public class NavigationController implements Serializable {
     public String moveToPageLoginChauffeur() {
         return "/Views/Chauffeur/LoginChauffeur?faces-redirect=true";
     }
+    public String moveToLogin() {
+        return "/Views/Chauffeur/LoginChauffeur?faces-redirect=true";
+    }
 
 }
